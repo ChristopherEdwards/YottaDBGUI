@@ -9089,6 +9089,7 @@ table.gde-data {
 
 table.gde-data th {
 	border: 1px solid black;
+	background-color: #f77825;
 }
 
 table.gde-data td {
@@ -9097,6 +9098,15 @@ table.gde-data td {
 
 table.gde-data tr {
 	border: 1px solid black;
+}
+
+table.gde-data tr:nth-child(odd) {
+	background-color: #3b1a68;
+	color: #ffffff;
+}
+
+table.gde-hidden {
+	visibility: collapse
 }
 
 .breadcrumb {
