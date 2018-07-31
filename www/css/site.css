@@ -9109,6 +9109,10 @@ table.gde-hidden {
 	visibility: collapse
 }
 
+.gde-fixed-width-font {
+	font-family: 'Inconsolata', monospace
+}
+
 .breadcrumb {
 	margin: auto;
 	text-align: center;
