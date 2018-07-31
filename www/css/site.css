@@ -474,7 +474,8 @@ table {
 
 td,
 th {
-    padding: 0
+    padding: 0;
+    border: 1;
 }
 
 * {
@@ -9078,4 +9079,27 @@ html {
     * html body {
         margin-top: 0 !important
     }
+}
+
+table.gde-data {
+    border: 1px solid black;
+    width: 100%;
+    margin-left: 75%;
+}
+
+table.gde-data th {
+	border: 1px solid black;
+}
+
+table.gde-data td {
+	border: 1px solid black;
+}
+
+table.gde-data tr {
+	border: 1px solid black;
+}
+
+.breadcrumb {
+	margin: auto;
+	text-align: center;
 }

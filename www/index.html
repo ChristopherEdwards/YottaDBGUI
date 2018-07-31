@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link type="text/css" media="all" href="css/site.css" rel="stylesheet" />
-    <title>YottaDB | Rock Solid. Lightning Fast. Secure.</title>
+    <title>YottaDB | System Management</title>
     <link rel="icon" href="favicon.png" type="image/png">
     <script src="jquery.js"></script>
     <link href="css/inconsolata.css" rel="stylesheet" />
@@ -237,12 +237,15 @@
         <div id="content_wrapper">
             <main id="home-wrap">
                 <section id="banner" class="clearHeader">
-                    <div clas="container">
+                    <div class="container">
+                        <div class="breadcrumb">
+                            <a href="#name">Names</a> | <a href="#region">Regions</a> | <a href="#journal">Journals</a> | <a href="#segment">Segments</a> | <a href="#map">Mapping</a>
+                        </div>
                         <div class="row">
                             <div class="col-lg-10 col-md-7 col-sm-7 col-xs-12">
-                                <table>
+                                <table class="gde-data">
                                     <caption>
-                                        <h3>Names</h3></caption>
+                                        <h3><a id="name">Names</a></h3></caption>
                                     <thead>
                                         <tr>
                                             <th>Global</th>
@@ -388,9 +391,9 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <table>
+                                <table class="gde-data">
                                     <caption>
-                                        <h3>Global Directory Regions</h3></caption>
+                                        <h3><a id="region">Global Directory Regions</a></h3></caption>
                                     <thead>
                                         <tr>
                                             <th>Name</th>
@@ -405,7 +408,7 @@
                                             <th>Qdb Rundown</th>
                                             <th>Epoch Taper</th>
                                             <th>AutoDB</th>
-                                            <th>stats</th>
+                                            <th>Stats</th>
                                             <th>Lock Crit</th>
                                         </tr>
                                     </thead>
@@ -417,13 +420,13 @@
                                             <td>16368</td>
                                             <td>1019</td>
                                             <td>NEVER</td>
-                                            <td>N</td>
-                                            <td>Y</td>
-                                            <td>N</td>
-                                            <td>N</td>
-                                            <td>Y</td>
-                                            <td>N</td>
-                                            <td>Y</td>
+                                            <td>No</td>
+                                            <td>Yes</td>
+                                            <td>No</td>
+                                            <td>No</td>
+                                            <td>Yes</td>
+                                            <td>No</td>
+                                            <td>Yes</td>
                                             <td>Sep</td>
                                         </tr>
                                         <tr>
@@ -433,13 +436,13 @@
                                             <td>4080</td>
                                             <td>255</td>
                                             <td>NEVER</td>
-                                            <td>N</td>
-                                            <td>Y</td>
-                                            <td>N</td>
-                                            <td>N</td>
-                                            <td>Y</td>
-                                            <td>N</td>
-                                            <td>Y</td>
+                                            <td>No</td>
+                                            <td>Yes</td>
+                                            <td>No</td>
+                                            <td>No</td>
+                                            <td>Yes</td>
+                                            <td>No</td>
+                                            <td>Yes</td>
                                             <td>Sep</td>
                                         </tr>
                                         <tr>
@@ -449,20 +452,20 @@
                                             <td>16368</td>
                                             <td>1019</td>
                                             <td>NEVER</td>
-                                            <td>N</td>
-                                            <td>N</td>
-                                            <td>N</td>
-                                            <td>N</td>
-                                            <td>Y</td>
-                                            <td>N</td>
-                                            <td>Y</td>
+                                            <td>No</td>
+                                            <td>No</td>
+                                            <td>No</td>
+                                            <td>No</td>
+                                            <td>Yes</td>
+                                            <td>No</td>
+                                            <td>Yes</td>
                                             <td>Sep</td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                <table>
+                                <table class="gde-data">
                                     <caption>
-                                        <h3>Journaling Information</h3></caption>
+                                        <h3><a id="journal">Journaling Information</a></h3></caption>
                                     <thead>
                                         <tr>
                                             <th>Region</th>
@@ -478,7 +481,7 @@
                                         <tr>
                                             <td>DEFAULT</td>
                                             <td>/home/vehu/j/vehu.mjl</td>
-                                            <td>Y</td>
+                                            <td>Yes</td>
                                             <td>2312</td>
                                             <td>2048</td>
                                             <td>2048</td>
@@ -487,7 +490,7 @@
                                         <tr>
                                             <td>PIP</td>
                                             <td>/home/vehu/j/pip.mjl</td>
-                                            <td>Y</td>
+                                            <td>Yes</td>
                                             <td>2312</td>
                                             <td>2048</td>
                                             <td>2048</td>
@@ -495,9 +498,9 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <table>
+                                <table class="gde-data">
                                     <caption>
-                                        <h3>Global Directory Segments</h3></caption>
+                                        <h3><a id="segment">Global Directory Segments</a></h3></caption>
                                     <thead>
                                         <tr>
                                             <th>Name</th>
@@ -519,7 +522,7 @@
                                             <td>4096</td>
                                             <td>200000</td>
                                             <td>1024</td>
-                                            <td>GLOB=4096 LOCK= 400 RES = 0 ENCR= OFF MSLT=1024 DALL= YES AIO = OFF</td>
+                                            <td>GLOB=4096 LOCK=400 RES=0 ENCR=OFF MSLT=1024 DALL=YES AIO=OFF</td>
                                         </tr>
                                         <tr>
                                             <td>PIP</td>
@@ -529,7 +532,7 @@
                                             <td>4096</td>
                                             <td>4000</td>
                                             <td>5000</td>
-                                            <td>GLOB=2000 LOCK= 40 RES = 0 ENCR= OFF MSLT=1024 DALL= YES AIO = OFF</td>
+                                            <td>GLOB=2000 LOCK=40 RES=0 ENCR=OFF MSLT=1024 DALL=YES AIO=OFF</td>
                                         </tr>
                                         <tr>
                                             <td>TEMP</td>
@@ -539,18 +542,20 @@
                                             <td>4096</td>
                                             <td>10000</td>
                                             <td>1024</td>
-                                            <td>DEFER LOCK= 400 RES = 0 ENCR= OFF MSLT=1024 DALL= YES</td>
+                                            <td>DEFER LOCK=400 RES=0 ENCR=OFF MSLT=1024 DALL=YES</td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                <table>
+                                <table class="gde-data">
                                     <caption>
-                                        <h3>Global Directory Mapping</h3></caption>
+                                        <h3><a id="map">Global Directory Mapping</a></h3></caption>
                                     <thead>
                                         <tr>
                                             <th>From</th>
                                             <th>To</th>
-                                            <th>Region Segment File
+                                            <th>Region</th>
+                                            <th>Segment</th>
+                                            <th>File</th>
                                             </th>
                                         </tr>
                                     </thead>
@@ -558,342 +563,478 @@
                                         <tr>
                                             <td>%</td>
                                             <td>%ZDDP</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>%ZDDP</td>
                                             <td>%ZDDP0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>%ZDDP0</td>
                                             <td>CTBL</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>CTBL</td>
                                             <td>CTBL0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>CTBL0</td>
                                             <td>CUVAR</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>CUVAR</td>
                                             <td>CUVAR0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>CUVAR0</td>
                                             <td>CacheTemp</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>CacheTemp</td>
                                             <td>CacheTemq</td>
-                                            <td>REG = TEMP SEG = TEMP FILE = /home/vehu/g/temp.dat</td>
+                                            <td>TEMP</td>
+                                            <td>TEMP</td>
+                                            <td>/home/vehu/g/temp.dat</td>
                                         </tr>
                                         <tr>
                                             <td>CacheTemq</td>
                                             <td>DBCTL</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>DBCTL</td>
                                             <td>DBCTL0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>DBCTL0</td>
                                             <td>DBINDX</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>DBINDX</td>
                                             <td>DBINDX0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>DBINDX0</td>
                                             <td>DBSUCLS</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>DBSUCLS</td>
                                             <td>DBSUCLS0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>DBSUCLS0</td>
                                             <td>DBSUSER</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>DBSUSER</td>
                                             <td>DBSUSER0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>DBSUSER0</td>
                                             <td>DBTBL</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>DBTBL</td>
                                             <td>DBTBL0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>DBTBL0</td>
                                             <td>OBJECT</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>OBJECT</td>
                                             <td>OBJECT0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>OBJECT0</td>
                                             <td>PROCID</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>PROCID</td>
                                             <td>PROCID0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>PROCID0</td>
                                             <td>SCATBL</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>SCATBL</td>
                                             <td>SCATBL0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>SCATBL0</td>
                                             <td>SCAU</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>SCAU</td>
                                             <td>SCAU0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>SCAU0</td>
                                             <td>SQL</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>SQL</td>
                                             <td>SQL0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>SQL0</td>
                                             <td>STBL</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>STBL</td>
                                             <td>STBL0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>STBL0</td>
                                             <td>SVCTRL</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>SVCTRL</td>
                                             <td>SVCTRL0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>SVCTRL0</td>
                                             <td>SYSMAP</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>SYSMAP</td>
                                             <td>SYSMAP0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>SYSMAP0</td>
                                             <td>SYSMAPX</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>SYSMAPX</td>
                                             <td>SYSMAPX0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>SYSMAPX0</td>
                                             <td>TBXBUILD</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TBXBUILD</td>
                                             <td>TBXBUILD0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TBXBUILD0</td>
                                             <td>TBXFIX</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TBXFIX</td>
                                             <td>TBXFIX0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TBXFIX0</td>
                                             <td>TBXINST</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TBXINST</td>
                                             <td>TBXINST0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TBXINST0</td>
                                             <td>TBXLOAD</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TBXLOAD</td>
                                             <td>TBXLOAD0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TBXLOAD0</td>
                                             <td>TBXLOG</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TBXLOG</td>
                                             <td>TBXLOG0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TBXLOG0</td>
                                             <td>TBXLOGX</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TBXLOGX</td>
                                             <td>TBXLOGX0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TBXLOGX0</td>
                                             <td>TBXREJ</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TBXREJ</td>
                                             <td>TBXREJ0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TBXREJ0</td>
                                             <td>TEMP</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TEMP</td>
                                             <td>TEMP0</td>
-                                            <td>REG = TEMP SEG = TEMP FILE = /home/vehu/g/temp.dat</td>
+                                            <td>TEMP</td>
+                                            <td>TEMP</td>
+                                            <td>/home/vehu/g/temp.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TEMP0</td>
                                             <td>TMP</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TMP</td>
                                             <td>TMP0</td>
-                                            <td>REG = TEMP SEG = TEMP FILE = /home/vehu/g/temp.dat</td>
+                                            <td>TEMP</td>
+                                            <td>TEMP</td>
+                                            <td>/home/vehu/g/temp.dat</td>
                                         </tr>
                                         <tr>
                                             <td>TMP0</td>
                                             <td>UTBL</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>UTBL</td>
                                             <td>UTBL0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>UTBL0</td>
                                             <td>UTILITY</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>UTILITY</td>
                                             <td>UTILITY0</td>
-                                            <td>REG = TEMP SEG = TEMP FILE = /home/vehu/g/temp.dat</td>
+                                            <td>TEMP</td>
+                                            <td>TEMP</td>
+                                            <td>/home/vehu/g/temp.dat</td>
                                         </tr>
                                         <tr>
                                             <td>UTILITY0</td>
                                             <td>XDBREF</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>XDBREF</td>
                                             <td>XDBREF0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>XDBREF0</td>
                                             <td>XTMP</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>XTMP</td>
                                             <td>XTMP0</td>
-                                            <td>REG = TEMP SEG = TEMP FILE = /home/vehu/g/temp.dat</td>
+                                            <td>TEMP</td>
+                                            <td>TEMP</td>
+                                            <td>/home/vehu/g/temp.dat</td>
                                         </tr>
                                         <tr>
                                             <td>XTMP0</td>
                                             <td>XUTL</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>XUTL</td>
                                             <td>XUTL0</td>
-                                            <td>REG = TEMP SEG = TEMP FILE = /home/vehu/g/temp.dat</td>
+                                            <td>TEMP</td>
+                                            <td>TEMP</td>
+                                            <td>/home/vehu/g/temp.dat</td>
                                         </tr>
                                         <tr>
                                             <td>XUTL0</td>
                                             <td>dbtbl</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>dbtbl</td>
                                             <td>dbtbl0</td>
-                                            <td>REG = PIP SEG = PIP FILE = /home/vehu/g/pip.dat</td>
+                                            <td>PIP</td>
+                                            <td>PIP</td>
+                                            <td>/home/vehu/g/pip.dat</td>
                                         </tr>
                                         <tr>
                                             <td>dbtbl0</td>
                                             <td>...</td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                         <tr>
                                             <td>LOCAL LOCKS</td>
                                             <td></td>
-                                            <td>REG = DEFAULT SEG = DEFAULT FILE = /home/vehu/g/vehu.dat</td>
+                                            <td>DEFAULT</td>
+                                            <td>DEFAULT</td>
+                                            <td>/home/vehu/g/vehu.dat</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1127,7 +1268,7 @@
                         <div class="col-sm-16 col-sm-offset-4">
                             © 2018 YottaDB, LLC. All Rights Reserved.
                             <ul id="menu-footer-menu" class="menu">
-                                <li id="menu-item-458" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-458">
+                                <!--<li id="menu-item-458" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-458">
                                     <a href="https://yottadb.com/about-us/privacy-policy/">Privacy</a>
                                 </li>
                                 <li id="menu-item-459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-459">
@@ -1135,7 +1276,7 @@
                                 </li>
                                 <li id="menu-item-460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-460">
                                     <a href="https://yottadb.com/about-us/copyright-statement/">Copyright</a>
-                                </li>
+                                </li>-->
                                 <li id="menu-item-461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-461">
                                     <a href="https://yottadb.com/product/license/">License</a>
                                 </li>
