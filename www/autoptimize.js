@@ -771,11 +771,11 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on the button, open the modal
 regionDetails = function(region) {
     modal.style.display = "block";
-    modalContent.innerHTML ="<span class=\"close\">&times;</span><p>Region Details</p><p>Region: " + region + "</p>\n<p>Segment: " + region + "</p>";
+    modalContent.innerHTML ="<span onclick=\"closeModal();\" class=\"close\">&times;</span><p>Region Details</p><p>Region: " + region + "</p>\n<p>Segment: " + region + "</p>";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+closeModal = function() {
     modal.style.display = "none";
 }
 
