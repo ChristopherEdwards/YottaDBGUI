@@ -1,9 +1,15 @@
 <template>
 <div id="footer_sitemap">
-  <div id="footer_toggle_one" class="ydb_circle ydb_sitemap_toggle toggle" data-toggle="#ydb_sitemap_holder" data-linked="#footer_toggle_two"></div>
+  <div id="footer_toggle_one"
+       class="ydb_circle ydb_sitemap_toggle toggle"
+       data-toggle="#ydb_sitemap_holder"
+       data-linked="#footer_toggle_two"></div>
   <div id="sitemap-desc" class="text-center">Sitemap</div>
   <div id="ydb_sitemap_holder">
-    <div id="footer_toggle_two" class="ydb_circle ydb_sitemap_toggle toggle" data-toggle="#ydb_sitemap_holder" data-linked="#footer_toggle_one"></div>
+    <div id="footer_toggle_two"
+         class="ydb_circle ydb_sitemap_toggle toggle"
+         data-toggle="#ydb_sitemap_holder"
+         data-linked="#footer_toggle_one"></div>
     <div class="container">
       <div class="row content-holder">
         <div class="col-sm-24 nav" id="footer-nav">
