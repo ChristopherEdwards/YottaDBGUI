@@ -43,7 +43,26 @@
         <template slot="row-details" slot-scope="row">
           <b-card>
             <ul>
-              <li v-for="(value, key) in row.item" :key="key">{{ key }}: {{ value}}</li>
+              <li>
+                <div>From:</div>
+                <div class="fixed-width-font">{{ row.item.from }}</div>
+              </li>
+              <li>
+                <div>To:</div>
+                <div class="fixed-width-font">{{ row.item.to }}</div>
+              </li>
+              <li>
+                <div>Region:</div>
+                <div>{{ row.item.region }}</div>
+              </li>
+              <li>
+                <div>Segment:</div>
+                <div>{{ row.item.segment }}</div>
+              </li>
+              <li>
+                <div>File:</div>
+                <div class="fixed-width-font">{{ row.item.file }}</div>
+              </li>
             </ul>
           </b-card>
         </template>
@@ -56,42 +75,41 @@
         </b-col>
       </b-row>
       <!-- Info modal -->
-      <b-modal id="modalInfo" @hide="resetModal" :title="modalInfo.title">
+      <b-modal id="modalInfo" @hide="resetModal" title="Edit Mapping">
         <b-form-group horizontal class="mb-0">
           <b-input-group>
             <b-col>
-              <label for="from">From:</label>
+              <label for="from" class="modal-label">From:</label>
               <b-form-input id="from"
                             v-model="selectedItem.from"
                             :value="selectedItem.from" />
             </b-col>
             <b-col>
-              <label for="to">To:</label>
+              <label for="to" class="modal-label">To:</label>
               <b-form-input id="to"
                             v-model="selectedItem.to"
                             :value="selectedItem.to" />
             </b-col>
             <b-col>
-              <label for="region">Region:</label>
+              <label for="region" class="modal-label">Region:</label>
               <b-form-input id="region"
                             v-model="selectedItem.region"
                             :value="selectedItem.region" />
             </b-col>
             <b-col>
-              <label for="segment">Segment:</label>
+              <label for="segment" class="modal-label">Segment:</label>
               <b-form-input id="segment"
                             v-model="selectedItem.segment"
                             :value="selectedItem.segment" />
             </b-col>
             <b-col>
-              <label for="file">File:</label>
+              <label for="file" class="modal-label">File:</label>
               <b-form-input id="file"
                             v-model="selectedItem.file"
                             :value="selectedItem.file" />
             </b-col>
           </b-input-group>
         </b-form-group>
-        <pre>{{ modalInfo.content }}</pre>
       </b-modal>
     </b-container>
           <!-- <table class="gde-data">
@@ -190,7 +208,6 @@ export default {
         { key: 'from', label: 'From', sortable: true, sortDirection: 'desc', class: 'fixed-width-font' },
         { key: 'to', label: 'To', sortable: true, class: 'fixed-width-font' },
         { key: 'region', label: 'Region', sortable: true },
-        { key: 'segment', label: 'Segment', sortable: true },
         { key: 'file', label: 'File', sortable: true, class: 'fixed-width-font' },
         { key: 'actions', label: 'Actions' },
       ],
