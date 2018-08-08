@@ -2,17 +2,12 @@
 <main id="home-wrap">
   <section id="banner" class="clearHeader">
     <b-container fluid>
-    <!-- <div class="container"> -->
       <b-row>
-      <!-- <div class="row"> -->
         <b-col lg="10" md="7" sm="7" xs="12">
-        <!-- <div class="col-lg-10 col-md-7 col-sm-7 col-xs-12"> -->
-          <b-form-group horizontal label="Filter" class="mb-0">
+          <b-form-group horizontal class="mb-0">
             <b-input-group>
               <b-form-input v-model="filter" placeholder="Type to Search" />
-              <b-input-group-append>
-                <b-btn :disabled="!filter" @click="filter = ''">Clear</b-btn>
-              </b-input-group-append>
+              <b-btn :disabled="!filter" @click="filter = ''">Clear</b-btn>
             </b-input-group>
           </b-form-group>
         </b-col>
@@ -20,6 +15,8 @@
       <!-- Main table element -->
       <b-table show-empty
                stacked="md"
+               :striped="striped"
+               :hover="hover"
                :items="items"
                :fields="fields"
                :current-page="currentPage"
@@ -31,33 +28,69 @@
                @filtered="onFiltered">
         <template slot="actions" slot-scope="row">
           <!-- We use @click.stop here to prevent a 'row-clicked' event from also happening -->
-          <b-button size="sm"
+<!--           <b-button size="sm"
                     @click.stop="info(row.item, row.index, $event.target)"
                     class="mr-1">
             JSON
-          </b-button>
-          <!-- <b-button size="sm" @click.stop="row.toggleDetails">
-            {{ row.detailsShowing ? 'Hide' : 'Show' }} Details
           </b-button> -->
+          <b-button size="sm" @click.stop="row.toggleDetails">
+            {{ row.detailsShowing ? 'Hide' : 'Show' }} Details
+          </b-button>
+          <b-button size="sm" v-b-modal.modalInfo @click="info(row.item)">
+            Edit
+          </b-button>
         </template>
-        <!-- <template slot="row-details" slot-scope="row">
+        <template slot="row-details" slot-scope="row">
           <b-card>
             <ul>
               <li v-for="(value, key) in row.item" :key="key">{{ key }}: {{ value}}</li>
             </ul>
           </b-card>
-        </template> -->
+        </template>
       </b-table>
       <b-row>
-        <b-col>
+        <b-col lg="10" md="7" sm="7" xs="12">
           <b-pagination :total-rows="totalRows"
                         :per-page="perPage"
-                        v-model="currentPage"
-                        class="my-0" />
+                        v-model="currentPage"/>
         </b-col>
       </b-row>
       <!-- Info modal -->
-      <b-modal id="modalInfo" @hide="resetModal" :title="modalInfo.title" ok-only>
+      <b-modal id="modalInfo" @hide="resetModal" :title="modalInfo.title">
+        <b-form-group horizontal class="mb-0">
+          <b-input-group>
+            <b-col>
+              <label for="from">From:</label>
+              <b-form-input id="from"
+                            v-model="selectedItem.from"
+                            :value="selectedItem.from" />
+            </b-col>
+            <b-col>
+              <label for="to">To:</label>
+              <b-form-input id="to"
+                            v-model="selectedItem.to"
+                            :value="selectedItem.to" />
+            </b-col>
+            <b-col>
+              <label for="region">Region:</label>
+              <b-form-input id="region"
+                            v-model="selectedItem.region"
+                            :value="selectedItem.region" />
+            </b-col>
+            <b-col>
+              <label for="segment">Segment:</label>
+              <b-form-input id="segment"
+                            v-model="selectedItem.segment"
+                            :value="selectedItem.segment" />
+            </b-col>
+            <b-col>
+              <label for="file">File:</label>
+              <b-form-input id="file"
+                            v-model="selectedItem.file"
+                            :value="selectedItem.file" />
+            </b-col>
+          </b-input-group>
+        </b-form-group>
         <pre>{{ modalInfo.content }}</pre>
       </b-modal>
     </b-container>
@@ -154,10 +187,11 @@ export default {
     return {
       items,
       fields: [
-        { key: 'from', label: 'From Global', sortable: true, sortDirection: 'desc' },
-        { key: 'to', label: 'To Global', sortable: true },
+        { key: 'from', label: 'From', sortable: true, sortDirection: 'desc', class: 'fixed-width-font' },
+        { key: 'to', label: 'To', sortable: true, class: 'fixed-width-font' },
         { key: 'region', label: 'Region', sortable: true },
         { key: 'segment', label: 'Segment', sortable: true },
+        { key: 'file', label: 'File', sortable: true, class: 'fixed-width-font' },
         { key: 'actions', label: 'Actions' },
       ],
       currentPage: 1,
@@ -167,6 +201,9 @@ export default {
       sortDesc: false,
       sortDirection: 'asc',
       filter: null,
+      striped: true,
+      hover: true,
+      selectedItem: '',
       modalInfo: { title: '', content: '' },
     };
   },
@@ -179,10 +216,8 @@ export default {
     },
   },
   methods: {
-    info(item, index, button) {
-      this.modalInfo.title = `Mapping Details: ${index}`;
-      this.modalInfo.content = JSON.stringify(item, null, 2);
-      this.$root.$emit('bv::show::modal', 'modalInfo', button);
+    info(item) {
+      this.selectedItem = item;
     },
     resetModal() {
       this.modalInfo.title = '';
