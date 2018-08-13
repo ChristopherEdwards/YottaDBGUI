@@ -1,10 +1,10 @@
 <template>
 <ul id="menu-main-menu" class="menu">
   <li v-for="menu in menus.main" :key="menu.name" class="menu-item menu-item-has-children">
-    <a :href="menu.url" v-text="menu.name"></a>
+    <router-link :to="menu.url" v-text="menu.name"></router-link>
     <ul class="sub-menu">
       <li v-for="submenu in menu.submenus" :key="submenu.name" class="menu-item">
-        <a :href="submenu.url" v-text="submenu.name"></a>
+        <router-link :to="submenu.url" v-text="submenu.name"></router-link>
       </li>
     </ul>
   </li>
@@ -24,7 +24,7 @@ export default {
             submenus: [
               {
                 name: 'Global Directory Editor (GDE)',
-                url: '#',
+                url: 'gde',
               },
               {
                 name: 'Data Structure Editor (DSE)',

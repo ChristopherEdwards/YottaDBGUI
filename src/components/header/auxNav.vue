@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import search from '@/components/search';
+import search from '@/components/header/search';
 
 export default {
   name: 'auxNav',

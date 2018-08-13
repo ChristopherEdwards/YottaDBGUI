@@ -33,8 +33,8 @@
 </template>
 
 <script>
-import socialMedia from '@/components/socialMedia';
-import siteMap from '@/components/siteMap';
+import socialMedia from '@/components/footer/socialMedia';
+import siteMap from '@/components/footer/siteMap';
 
 export default {
   name: 'mainFooter',

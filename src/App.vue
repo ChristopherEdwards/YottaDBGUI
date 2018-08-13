@@ -3,15 +3,19 @@
   <mainHeader></mainHeader>
   <div id="header_clear"></div>
   <div id="content_wrapper">
-    <router-view/>
+    <main id="home-wrap">
+      <section id="banner" class="clearHeader">
+        <router-view/>
+      </section>
+    </main>
   </div>
   <mainFooter></mainFooter>
 </div>
 </template>
 
 <script>
-import mainHeader from '@/components/mainHeader';
-import mainFooter from '@/components/mainFooter';
+import mainHeader from '@/components/header/mainHeader';
+import mainFooter from '@/components/footer/mainFooter';
 
 export default {
   name: 'App',
