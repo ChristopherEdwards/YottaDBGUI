@@ -1,7 +1,7 @@
 <template>
   <b-container fluid>
     This is the home page.
-    Please go to the GDE menu entry or <router-link to="/gde"><a>click here</a></router-link>
+    Please go to the GDE menu entry or <router-link to="/gde">click here</router-link>
   </b-container>
 </template>
 
