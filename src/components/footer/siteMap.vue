@@ -103,7 +103,85 @@
 </template>
 
 <script>
+export default {
+  name: 'siteMap',
+  data() {
+    return {
+      menus: {
+        main: [
+          {
+            name: 'System Administraton',
+            url: '#',
+            submenus: [
+              {
+                name: 'Global Directory Editor (GDE)',
+                url: 'gde',
+              },
+              {
+                name: 'Data Structure Editor (DSE)',
+                url: '#',
+              },
+              {
+                name: 'SQL Management',
+                url: '#',
+              },
+              {
+                name: 'Web Server',
+                url: '#',
+              },
+              {
+                name: 'Call-In Management',
+                url: '#',
+              },
+              {
+                name: 'Call-Out Management',
+                url: '#',
+              },
+            ],
+          },
+          {
+            name: 'Monitoring',
+            url: '#',
+            submenus: [
+              {
+                name: 'InfoHub',
+                url: '#',
+              },
+              {
+                name: 'gvstat',
+                url: '#',
+              },
+              {
+                name: 'Database Performance',
+                url: '#',
+              },
+              {
+                name: 'SQL Cached Queries',
+                url: '#',
+              },
+              {
+                name: 'Web Server',
+                url: '#',
+              },
+            ],
+          },
+          {
+            name: 'Resources',
+            url: '#',
+            submenus: [
+              {
+                name: 'Documentation',
+                url: 'https://yottadb.com/resources/documentation/',
+              },
+            ],
+          },
+        ],
+      },
+    };
+  },
+};
 </script>
 
 <style scoped>
+
 </style>

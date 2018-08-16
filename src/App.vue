@@ -5,8 +5,8 @@
   <div id="content_wrapper">
     <main id="home-wrap">
       <section id="banner" class="clearHeader">
-        <router-view/>
       </section>
+      <router-view/>
     </main>
   </div>
   <mainFooter></mainFooter>

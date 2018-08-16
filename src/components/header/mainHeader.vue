@@ -3,7 +3,7 @@
   <div class="container" id="main-header">
     <div class="row" id="navholder">
       <div class="col-md-6 col-sm-8" id="main-logo">
-        <a href="#">
+        <a href="/">
           <img src="../../assets/img/YottaDB_logo.svg" alt="YottaDB">
         </a>
       </div>
@@ -12,7 +12,7 @@
         <mainMenu></mainMenu>
         <div id="mobile-nav" class="row">
           <div id="mobile-logo">
-            <a href="https://yottadb.com">
+            <a href="/">
               <img src="../../assets/img/YottaDB_logo.svg" alt="YottaDB">
             </a>
           </div>
@@ -38,6 +38,5 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
+<style>
 </style>
